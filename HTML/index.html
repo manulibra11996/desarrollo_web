@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="imagen/x-icon" href="assets/img/favicon_io/favicon-32x32.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Mi porfolio</title>
+</head>
+<body>
+    <!-- Este es mi primer comentario, indicando la cabecera de la pagina -->
+    <header class="container">
+        <p>El porfolio de Manuel</p>
+        <nav>
+            <ul>
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="dropdown">
+        <button>Menú</button>
+        <div class="dropdown-content">
+            <a href="#about">Sobre mí</a>
+            <a href="#projects">Proyectos</a>
+            <a href="#skills">Habilidades</a>
+            <a href="#contact">Contacto</a>
+        </div>
+    </div>
+
+    <div class="contenedor">
+        <div class="texto">
+            <h2>Título del contenido</h2>
+            <p>
+                Este es un texto descriptivo. Puedes escribir aquí información, 
+                detalles o cualquier contenido que desees acompañar con una imagen.
+            </p>
+        </div>
+        <img class="imagen" src="assets/img/imagen_prueba.png" alt="Imagen de prueba" id="imagen">
+    </div>
+    <h1 id="about" class="container">Me presento ...</h1>
+    <h2 id="trabajo">Soy analista de datos</h2>
+    <h4 id="estudios">Aqui tienes mis estudios</h4>
+    <img src="assets/img/imagen_prueba.png" alt="Imagen de prueba" id="imagen">
+
+    <ul id="lista_desordenado">
+        <li>HTML</li>
+        <li>Css</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <ol id="lista_ordenado">
+        <li>Lista 1</li>
+        <li>Lista 2</li>
+        <li>Lista 3</li>
+    </ol>
+
+    <a href="https://www.youtube.com/watch?v=ofrM-xTVvtA&list=RDofrM-xTVvtA&start_radio=1" id="enlace"> youtube</a>
+    <p id="porfolio">Bienvenido a este porfolio</p>
+
+    <table border="1" id="tabla">
+        <tr id="encabezado">
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Edad</th>
+            <th>Ciudad</th>
+        </tr>
+        <tr id="filas">
+            <td>Manuel</td>
+            <td>Fernández</td>
+            <td>28</td>
+            <td>Sevilla</td>
+        </tr>
+    </table>
+    <br>
+    <form action="" id="formulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="name" name="user_name" /><br>
+        <label for="email">Correo electronico:</label>
+        <input type="email" id="mail" name="user_mail" /><br>
+        <label for="msg">Mensaje:</label>
+        <textarea id="msg" name="user_mensage"></textarea><br>
+        <input type="submit" value="enviar">
+    </form>
+</body>
+</html>
