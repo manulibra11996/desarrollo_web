@@ -1,0 +1,52 @@
+body{
+    background-color: aqua;
+    
+}
+
+main{
+    display: grid;
+    place-items: center;
+}
+
+header{
+    background-color: blue;
+    text-align: center;
+}
+
+h1{
+    color: white;
+    
+}
+
+.inicio{
+    color: white;
+    
+}
+
+nav{
+    text-align: left;
+}
+
+.contenido{
+    background-color: #f4f4f4;
+    width: 55%;
+    padding-left: 10px;
+}
+
+
+img {
+    width: 50%;
+    display:block;
+    margin:auto;
+}
+
+li{
+    background-color: grey;
+    margin-right: 30px;
+    border: 0px solid grey;
+    border-radius: 3px;
+}
+
+ul{
+    list-style: none;
+}
