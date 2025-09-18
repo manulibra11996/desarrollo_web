@@ -1,0 +1,139 @@
+* { 
+    box-sizing: border-box; 
+}
+
+body {
+ margin: 0;
+ font-family: Roboto, Arial, sans-serif;
+ color: #1f1f1f;
+}
+
+.grid-container {
+    display: grid; 
+    grid-template-areas:
+        "header header header" 
+        "banner main aside" 
+        "footer footer footer";
+    grid-template-columns: 150px 1fr 220px;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.site-header { 
+    grid-area: header;
+    background-color: #1f1f1f;
+    color: beige; 
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 2em;
+}
+
+.banner { 
+    grid-area: banner; 
+    background-color: chocolate;
+    color: beige;
+    padding: 1em;
+}
+
+main { 
+    grid-area: main; 
+}
+
+.articulos{
+    display: grid;
+    /* Prueba a cambiar estas propiedades: */
+    grid-template-columns: 1fr 1fr 1fr; /* Cambia el número de columnas */
+    gap: 16px;                      /* Espacio entre los items */
+    padding: 20px;
+    margin-top: 32px;
+    min-height: 120px;
+}
+
+img{
+    border-radius: 5px;
+}
+
+.card{
+    border: 2px solid #a0a3a6;
+    padding: 18px 0;
+    border-radius: 8px;
+    font-size: 1.1em;
+    transition: background 0.3s;
+}
+
+.card--meta{
+    text-align: left;
+    padding: 1em;
+    background-color: lightgrey;
+}
+
+.card--media{
+    text-align: center;
+    padding: 1em;
+    background-color: rgb(243, 239, 239);
+}
+
+.card-title{
+    font-weight: bold;
+    margin-bottom: 1px;
+}
+
+.card-date{
+    color: grey;
+}
+
+.card--row{
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    gap: 12px;
+    padding: 1em;
+    font-size: 1em;
+}
+
+.avatar{
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+}
+
+.muted{
+    color: grey;
+}
+
+.btn{
+    background-color: orangered;
+    color: beige;
+    border-radius: 5px;
+    border: none;
+    padding: 0.5em;
+}
+
+
+
+.aside { 
+    grid-area: aside; 
+    background-color: darkgrey;
+    padding: 1em;
+}
+
+.site-footer { 
+    grid-area: footer; 
+    background-color: rgb(67, 67, 67);
+    color: beige;
+    padding: 1em;
+}
+
+ .menu{
+    display: flex;
+    list-style: none;
+    gap: 12px;
+ }
+ 
+ a{
+    color: beige;
+    text-decoration: none;
+ }
+
