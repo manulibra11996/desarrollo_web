@@ -43,9 +43,8 @@ main {
 
 .articulos{
     display: grid;
-    /* Prueba a cambiar estas propiedades: */
-    grid-template-columns: 1fr 1fr 1fr; /* Cambia el número de columnas */
-    gap: 16px;                      /* Espacio entre los items */
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 16px;                      
     padding: 20px;
     margin-top: 32px;
     min-height: 120px;
@@ -65,7 +64,7 @@ img{
 
 .card--meta{
     text-align: left;
-    padding: 1em;
+    padding: 1em; 
     background-color: lightgrey;
 }
 

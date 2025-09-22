@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label for="name">Nombre:</label>
+            <input type="text" name="name" id="name" placeholder="Ingrese su nombre" required>
+            <small aria-describedby="Indique su nombre"></small>
+            <br>
+
+            <label for="apellido">Apellidos:</label>
+            <input type="text" name="apellido" id="surname" placeholder="Ingrese su apellido">
+            <br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Contacto</legend>
+            <label for="email">Correo electronico:</label>
+            <input type="email" name="email" id="email" placeholder="Ingrese su correo electronico" required>
+            <br>
+
+            <label for="telefono">Telefono:</label>
+            <input type="tel" name="telefono" id="telefono" placeholder="Ingrese su numero de telefono" 
+            pattern="(?.*[0-9]){9,}" maxlength="9" required>
+            <br>
+        
+
+            <label for="ciudad">Ciudad:</label>
+            <datalist name="ciudad" id="ciudad">
+                <option disabled selected value="">Seleccione una ciudad...</option>
+                <option value="ciudad-1">Sevilla</option>
+                <option value="ciudad-2">Cadiz</option>
+                <option value="ciudad-3">Madrid</option>
+            </datalist>
+            <br>
+
+            <label for="pais">Pais</label>
+            <select name="pais" id="pais" required>
+                <option disabled selected value="">Seleccione un pais...</option>
+                <option value="pais-1">España</option>
+                <option value="pais-2">Francia</option>
+                <option value="pais-3">Portugal</option>
+            </select>
+            <br>
+
+            <label for="fecha">Fecha de nacimiento</label>
+            <input type="date" name="fecha" id="fecha" required>
+            <br>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Cuenta</legend>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" placeholder="Ingrese su contraseña"
+            pattern="(?.*[a-z])(?.*[A-Z])(?.*\d)[A-Za-z\d]{8,}"
+            title="Mínimo 8 caracteres, al menos 1 mayúscula, 1 minúscula y 1 numero"
+            aria-describedby="ayuda-pass" minlength="8" required>
+            <small id="ayuda-pass">Nunca compartiremos tu contraseña con nadie.</small>
+            <br>
+
+            <p>Preferencia de contacto<br>
+            <label for="correo">Correo electonico
+            <input type="radio" name="asiento" id="correo" value="correo"></label>
+            <br>
+
+            <label for="telefono">Telefono
+            <input type="radio" name="asiento" id="telefono" value="telefono"></label>
+            <br>
+
+            <label for="mensaje">Mensaje
+            <input type="radio" name="asiento" id="mensaje" value="mensaje"></label>
+            </p>
+
+            <label for="privacidad">Aceptas las codiciones de privacidad
+            <input type="checkbox" name="privacidad" id="privacidad" value="yes" required></label>
+            <br>
+        </fieldset>
+    </form>
+</body>
+</html>

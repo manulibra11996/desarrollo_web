@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi formulario</title>
+    <style>
+        :root{
+            --brand: #e44d26;
+            --brand-2: #f16529;
+            --ink: #1f1f1f;
+            --muted: #6b6b6b;
+            --bg: #fff;
+            --panel: #fff8f3;
+            --border: #e7e7e7;
+            --ok: #2e7d32;
+            --bad: #b00020;
+            --focus: #1e88e5;
+
+        }
+    </style>
+
+</head>
+<body>
+    <form action="maito:manulibra1996@gmail.com" method="post">
+        <fieldset style="background-color: var(--ink);">
+            <legend>Datos personales</legend>
+            <label for="name">Nombre:</label>
+            <input type="text" name="name" id="name" placeholder="Ingrese su nombre">
+            <br>
+
+            <label for="apellido">Apellidos:</label>
+            <input type="text" name="apellido" id="surname" placeholder="Ingrese su apellido">
+            <br>
+
+            <label for="email">Correo electronico:</label>
+            <input type="email" name="email" id="email" placeholder="Ingrese su correo electronico">
+            <br>
+
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" placeholder="Ingrese su contraseña"
+            pattern="(?.*[a-z])(?.*[A-Z])(?.*\d)[A-Za-z\d]{8,}"
+            title="Mínimo 8 caracteres, al menos 1 mayúscula, 1 minúscula y 1 numero"
+            aria-describedby="ayuda-pass" required>
+        </fieldset>
+        <br><br>
+        <fieldset>
+            <legend>Datos de viaje</legend>
+            <label for="telefono">Telefono:</label>
+            <input type="tel" name="telefono" id="telefono" placeholder="Ingrese su numero de telefono">
+            <br>
+
+            <label for="premium">Asiento Premium</label>
+            <input type="radio" name="asiento" id="premium" value="asiento-premium">
+            <br>
+
+            <label for="eco-plus">Asiento Economy+</label>
+            <input type="radio" name="asiento" id="eco-plus" value="asiento-economy-pl">
+            <br>
+
+            <label for="eco">Asiento Economy</label>
+            <input type="radio" name="asiento" id="eco" value="asiento-economy">
+            <br>
+
+            <label for="vino-premiun">Vino Premium</label>
+            <input type="checkbox" name="adicionales" id="vino-premiun" value="vino-premiun">
+            <br>
+
+            <label for="vino">Vino</label>
+            <input type="checkbox" name="adicionales" id="vino" value="vino">
+            <br>
+
+            <label for="manta">Manta</label>
+            <input type="checkbox" name="adicionales" id="manta" value="manta">
+            <br>
+
+            <label for="hoteles">Hoteles disponibles</label>
+            <select name="hoteles" id="hoteles" required>
+                <option disabled selected value="">Seleccione un hotel...</option>
+                <option value="hotel-1">Abasto Hotel</option>
+                <option value="hotel-2">Ritz</option>
+                <option value="hotel-3">Islas Cayman Hotel</option>
+            </select>
+            <br>
+
+            <label for="range">Temperatura Asiento</label>
+            <span>15</span>
+            <input type="range" min="15" max="50">
+            <span>50</span>
+            <br>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea name="mensaje" id="mensaje" p></textarea>
+            <br>
+
+        </fieldset>
+        <br>
+       <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
