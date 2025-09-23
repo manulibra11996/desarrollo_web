@@ -1,0 +1,132 @@
+:root{
+    --fondo-header: #F22C81;
+    --fondo-main: #F2362C;
+    --fondo-footer: #F27B2C;
+    --fondo-tarjeta: #343434;
+}
+
+
+* { 
+    box-sizing: border-box; 
+}
+
+body {
+ margin: 0;
+ font-family: Roboto, Arial, sans-serif;
+ color: #1f1f1f;
+}
+
+.grid-container {
+    display: grid; 
+    grid-template-areas:
+        "header header header" 
+        "main main main" 
+        "footer footer footer";
+    grid-template-columns: 150px 1fr 220px;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.site-header { 
+    grid-area: header;
+    background-color: var(--fondo-header);
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em;
+}
+ .menu{
+    display: flex;
+    list-style: none;
+    gap: 12px;
+ }
+ 
+ h2{
+    padding-left: 2em;
+    padding-bottom: 0.5em;
+}
+ a{
+    color: beige;
+    text-decoration: none;
+ }
+
+main { 
+    grid-area: main; 
+    background-color: var(--fondo-main);
+}
+
+.site-footer { 
+    grid-area: footer; 
+    background-color: var(--fondo-footer);
+}
+
+.card{
+    border: 2px solid #a0a3a6;
+    border-radius: 8px;
+    font-size: 1.1em;
+    transition: background 0.3s;
+    background-color: var(--fondo-tarjeta);
+    overflow: hidden;
+    position: relative; 
+  /* Asegúrate de que no tenga padding, para que la imagen ocupe todo el espacio */
+  padding: 0; 
+}
+
+.card--media{
+    text-align: center;
+    padding: 1em;
+    background-color: rgb(243, 239, 239);
+}
+
+.articulos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 16px;                    
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    margin-top: 0px;
+    min-height: 120px;
+}
+
+.tarjeta{
+    position: relative;
+    width: 100%;
+}
+
+.imagen{
+    /* La imagen ocupa todo el ancho del contenedor */
+  width: 100%;
+  /* Y toda la altura, cubriendo el espacio de la tarjeta */
+  height: 100%;
+  /* Usa object-fit para evitar que la imagen se deforme al estirarse */
+  
+  display: block; 
+}
+
+.texto-oculto {
+    position: absolute; /* Permite posicionar el texto sobre la imagen */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* Estilos para el texto */
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    text-align: center;
+    
+    /* Control de la opacidad */
+    opacity: 0; /* Por defecto, el texto está invisible */
+    transition: opacity 0.4s ease-in-out; /* Transición suave para el efecto */
+}
+
+.card:hover .texto-oculto {
+    opacity: 1; /* Muestra el texto cuando el mouse está sobre el .card */
+}
+
+/* Opcional: Puedes dar estilo a los elementos internos del texto */
+.texto-oculto .card-title {
+    font-weight: bold;
+}
