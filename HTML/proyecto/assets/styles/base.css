@@ -12,6 +12,7 @@
 
 body {
  margin: 0;
+ padding: 0;
  font-family: Roboto, Arial, sans-serif;
  color: #1f1f1f;
 }
@@ -42,14 +43,24 @@ body {
     gap: 12px;
  }
  
- h2{
+h2{
     padding-left: 2em;
     padding-bottom: 0.5em;
 }
- a{
+
+.alineacion{
+    padding: 1em;
+}
+
+form{
+    padding-left: 2em;
+    padding-bottom: 0.5em;
+}
+
+a{
     color: beige;
     text-decoration: none;
- }
+}
 
 main { 
     grid-area: main; 
@@ -129,4 +140,18 @@ main {
 /* Opcional: Puedes dar estilo a los elementos internos del texto */
 .texto-oculto .card-title {
     font-weight: bold;
+}
+
+.btn-outline-dark{
+    color: black;
+    border: black solid 1px;
+    border-radius: 5px;
+}
+
+.centrado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.5em;
 }
