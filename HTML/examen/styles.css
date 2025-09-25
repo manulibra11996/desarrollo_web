@@ -1,0 +1,25 @@
+/*Aplicando el estilo en todo el codigo, poniendo el padding y el margin y asignandole los tipos de letra que debe utilizar*/
+*{
+    padding: 0;
+    margin: 0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+/*Aplicando a todas las etiquetas p que el texto se ponga en medio de la pagina*/
+p{
+    text-align: center;
+}
+/*Aplicando a la clase destacado que el texto se ponga a la derecha de la pagina y con negrita*/
+.destacado{
+    text-align: left;
+    font-weight: bold;
+}
+/*Aplicando a la clase propia que el fondo se ponga de color negro, tenga un borde de 2,5 pixeles y el texto sea blanco*/
+.propia{
+    background-color: black;
+    border: 2.5px solid rgb(169, 116, 47);
+    color: white;
+}
+/*Aplicando que todas las etiquetas footer que sean hijas de la etiqueta body tengan un fondo de color blueviolet*/
+body footer{
+    background-color: blueviolet;
+}
